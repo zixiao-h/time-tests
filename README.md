@@ -8,7 +8,7 @@ If you haven't already, fork this repository and clone it on your computer.
 
 ## Step 1: Understanding the existing code
 - Spend some time reading the code, try to run it and see whether you understand what's going on.
-- Have you seen [`datetime`](https://docs.python.org/3.7/library/datetime.html) before?
+- Have you seen [`datetime`](https://docs.python.org/3/library/datetime.html) before?
 - Play using your favourite tool (notebook, terminal, scripts) with the functions and objects used in `times.py`.
 
 ## Step 2: Writing a unit test
