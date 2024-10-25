@@ -1,4 +1,6 @@
 from times import time_range, compute_overlap_time
+import pytest
+
 
 def test_generic_case():
     large = time_range("2010-01-12 10:00:00", "2010-01-12 12:00:00")
@@ -30,3 +32,10 @@ def test_same_end_and_start():
     result = compute_overlap_time(large, short)
     expected = []
     assert result == expected
+
+
+def test_backwards_time_range():
+    large = time_range("2010-01-12 12:00:00", "2010-01-12 10:00:00")
+    short = time_range("2010-01-12 10:30:00", "2010-01-12 10:45:00")
+    with pytest.raises(ValueError):
+        compute_overlap_time(large, short)
